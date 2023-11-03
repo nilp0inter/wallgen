@@ -22,7 +22,6 @@ setup(
     author="Subhrajit Prusty",
     author_email="subhrajit1997@gmail.com",
     url="http://github.com/SubhrajitPrusty/wallgen",
-    setup_requires=["setuptools>=40.0.0"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
@@ -35,16 +34,8 @@ setup(
     ],
     keywords="image PIL wallpaper theme",
     license="MIT",
-    packages=find_packages(),
-    install_requires=[
-        "pillow",
-        "click",
-        "scipy",
-        "numpy",
-        "Cython",
-        "scikit-image",
-        "loguru",
-    ],
+    packages=["tools"], 
+    py_modules = ["wallgen", "app"],
     entry_points="""
     [console_scripts]
         wallgen=wallgen:cli
