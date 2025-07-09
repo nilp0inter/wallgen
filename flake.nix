@@ -17,6 +17,7 @@
           wallgen = with pkgs.python3Packages; buildPythonApplication {
             pname = "wallgen";
             version = "1.0";
+            format = "setuptools";
             src = ./.;
             propagatedBuildInputs = [ 
               pillow
